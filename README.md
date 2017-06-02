@@ -1,9 +1,7 @@
 # Protractor with Typescript
-<<<<<<< HEAD
 updated on branch test1
 updated on branch master
 updated in branch test2
->>>>>>> test2
 
 ## Getting started
 
