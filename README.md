@@ -2,6 +2,7 @@
 updated on branch test1
 updated on branch master
 updated in branch test2
+updated from Github repository
 
 ## Getting started
 
