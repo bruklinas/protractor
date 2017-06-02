@@ -3,6 +3,7 @@ updated on branch test1
 updated on branch master
 updated in branch test2
 updated from Github repository
+updated on branch master for a merge conflict
 
 ## Getting started
 
