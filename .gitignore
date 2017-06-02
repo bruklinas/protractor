@@ -2,3 +2,5 @@
 node_modules
 tmp/
 !asyncAwait/*.js
+npm-debug.log
+
