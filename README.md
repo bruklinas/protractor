@@ -1,5 +1,6 @@
 # Protractor with Typescript
 updated on branch test1
+updated on branch master
 
 ## Getting started
 
