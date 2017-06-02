@@ -1,4 +1,5 @@
 # Protractor with Typescript
+updated in branch test2
 
 ## Getting started
 
