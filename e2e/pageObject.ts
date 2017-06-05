@@ -1,13 +1,17 @@
-import {element, by } from 'protractor';
+import { element, by } from 'protractor';
 
-export class PageObject{
-    name = element(by.css("#id"));
+export class PageObject {
+    name = element(by.id("#id"));
 
     getName() {
         return this.name.getText();
     }
 
-    newFunction() : void{
+    firstFunction(): void {
         console.log("New function from branch 'dev' executed");
+    }
+
+    secondFunction() {
+        console.log("Second function from branch 'dev' executed");
     }
 }
