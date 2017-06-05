@@ -14,4 +14,8 @@ export class PageObject {
     secondFunction() {
         console.log("Second function from branch 'dev' executed");
     }
+
+    thirdFunction() {
+        console.log("Third function from branch 'master' executed");
+    }
 }
