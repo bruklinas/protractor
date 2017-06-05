@@ -1,6 +1,6 @@
 # Protractor with Typescript
 github update
-
+another github update
 ## Getting started
 
 This package.json references the local protractor directory with `"protractor": "file: ../"`. For the type declarations to work, from the protractor directory run an `npm install` to generate the declarations file.
