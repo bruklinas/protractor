@@ -6,4 +6,8 @@ export class PageObject{
     getName() {
         return this.name.getText();
     }
+
+    newFunction() : void{
+        console.log("New function from branch 'dev' executed");
+    }
 }
