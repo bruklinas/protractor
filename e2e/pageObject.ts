@@ -26,4 +26,7 @@ export class PageObject {
     remoteMasterFunction() : number{
         return 3;
     }
+    devFunction() : number{
+        return 1;
+    }
 }
