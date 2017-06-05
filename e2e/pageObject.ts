@@ -38,4 +38,8 @@ export class PageObject {
     secondDevFunction() : string {
         return "Hi";
     }
+
+    tagFunction() : void {
+        console.log("Empty");
+    }
 }
