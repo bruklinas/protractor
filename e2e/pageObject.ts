@@ -18,4 +18,8 @@ export class PageObject {
     thirdFunction() {
         console.log("Third function from branch 'master' executed");
     }
+
+    localMasterFunction() : number{
+        return 2;
+    }
 }
