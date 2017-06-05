@@ -34,4 +34,8 @@ export class PageObject {
     newMasterFunction() : number{
         return 4;
     }
+
+    secondDevFunction() : string {
+        return "Hi";
+    }
 }
