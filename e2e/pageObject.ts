@@ -22,4 +22,8 @@ export class PageObject {
     localMasterFunction() : number{
         return 2;
     }
+    
+    remoteMasterFunction() : number{
+        return 3;
+    }
 }
