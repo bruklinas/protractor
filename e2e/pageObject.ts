@@ -18,4 +18,8 @@ export class PageObject {
     devFunction() : number{
         return 1;
     }
+
+    secondDevFunction() : string {
+        return "Hi";
+    }
 }
