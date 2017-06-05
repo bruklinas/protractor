@@ -14,4 +14,8 @@ export class PageObject {
     secondFunction() {
         console.log("Second function from branch 'dev' executed");
     }
+
+    devFunction() : number{
+        return 1;
+    }
 }
