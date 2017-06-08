@@ -4,7 +4,7 @@
 // import {browser, element, by, By, $, $$, ExpectedConditions}
 //   from 'protractor/globals';
 //
-import {browser, element, by, ExpectedConditions} from 'protractor';
+import {browser, element, by, ExpectedConditions, promise} from 'protractor';
 import {PageObject} from './PageObject';
 
 export class AngularHomepage extends PageObject {
@@ -16,12 +16,13 @@ export class AngularHomepage extends PageObject {
   }
 
   setName(name: string) {
+    this.nameInput.clear();
     this.nameInput.sendKeys(name);
   }
 
   // getGreeting returns a webdriver.promise.Promise.<string>. For simplicity
   // setting the return value to any
-  getGreeting(): any {
+  getGreeting(): promise.Promise<string> {
     return this.greeting.getText();
   }
 }

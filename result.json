@@ -1,0 +1,38 @@
+[
+  {
+    "description": "angularjs homepage \"Name\" section should greet the named user",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 8442
+  },
+  {
+    "description": "angularjs homepage \"Name\" section should greet the named user with an updated name",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 4752
+  },
+  {
+    "description": "second spec second spec section 1 spec 2 should greet the named user",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 4795
+  },
+  {
+    "description": "second spec second spec section 1 spec2 greet the named user with an updated name",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 4286
+  }
+]

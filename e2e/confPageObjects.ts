@@ -15,6 +15,7 @@ export let config: Config = {
   capabilities: {
     browserName: 'chrome'
   },
-  specs: [ 'specPageObjects.js' ],
+  resultJsonOutputFile:'./result.json',
+  specs: [ 'greetingSpec.js', 'secondSpec.js' ],
   seleniumAddress: 'http://localhost:4444/wd/hub'
 };
