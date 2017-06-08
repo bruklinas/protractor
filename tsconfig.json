@@ -12,6 +12,5 @@
     "node_modules",
     "asyncAwait",
     "plugins.ts"
-    
   ]
 }

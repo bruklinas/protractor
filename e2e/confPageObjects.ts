@@ -16,5 +16,5 @@ export let config: Config = {
     browserName: 'chrome'
   },
   specs: [ 'specPageObjects.js' ],
-  //seleniumAddress: 'http://localhost:4444/wd/hub'
+  seleniumAddress: 'http://localhost:4444/wd/hub'
 };
