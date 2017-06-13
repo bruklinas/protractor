@@ -1,3 +1,4 @@
+From local master
 # Protractor with Typescript
 from origin/master
 github update
