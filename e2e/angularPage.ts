@@ -5,9 +5,9 @@
 //   from 'protractor/globals';
 //
 import {browser, element, by, ExpectedConditions, promise} from 'protractor';
-import {PageObject} from './PageObject';
+import {CommonFunctions} from './PageObject';
 
-export class AngularHomepage extends PageObject {
+export class AngularHomepage {
   nameInput = element(by.model('yourName'));
   greeting = element(by.binding('yourName'));
 

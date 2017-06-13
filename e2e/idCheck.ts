@@ -3,18 +3,20 @@ import { AngularHomepage } from './angularPage';
 import { browser } from 'protractor';
 
 // The jasmine typings are brought in via DefinitelyTyped ambient typings.
-describe('second spec', () => {
+describe('idSpec', () => {
   beforeEach(() => {
     browser.driver.manage().window().maximize();
   });
 
-  it('spec 2 should greet the named user', () => {
+  it('id add-some-control is displayed', () => {
     let angularHomepage = new AngularHomepage();
     angularHomepage.get();
-    if (angularHomepage.isElementDisplayedById("add-some-control")) {
-      console.log("toks elementas rastas");
-    } else {
-      console.log("tokio elemento nėra");
-    };
-  });
+    let isNotDisplayed = angularHomepage.isElementNotDisplayedById("add-some-controls", "Element was not found by that ID!");
+    expect(isNotDisplayed).toBe(true);
+/*      if (isDisplayed) {
+        console.log("toks elementas rastas");
+      } else {
+        console.log("tokio elemento nėra");
+      };
+*/  });
 });

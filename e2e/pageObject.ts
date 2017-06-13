@@ -1,13 +1,38 @@
 import { element, by } from 'protractor';
 
-export class PageObject {
+export class CommonFunctions {
+    /**
+     * Checks if elements is displayed
+     */
 
-    isElementDisplayedById (id : string) : boolean {
-        var isDisplayed : boolean = false;
-        
-        element(by.id(id)).isDisplayed().then(()=> {
-                isDisplayed=true;
-            })
-        return isDisplayed;
-     }
+    isElementDisplayedById(id: string, msg?: string): boolean {
+        var isElementDisplayed: boolean = false;
+        let elm = element(by.id(id));
+        var resolvedProm = elm.isPresent().then;
+
+       resolvedProm(() => {
+            elm.isDisplayed().then(() => {
+                console.log("Radom elementa... " + id);
+                isElementDisplayed = true;
+                console.log("isElementDisplayed reikšmė prieš išeinant iš IF'o: " + isElementDisplayed);
+            });
+        });
+        console.log("isElementDisplayed reikšmė prieš grąžinant: " + isElementDisplayed);
+        return isElementDisplayed;
+    }
+
+    /**
+ * Checks if elements is NOT displayed
+ */
+    isElementNotDisplayedById(id: string, msg: string): boolean {
+        var isElementNotDisplayed: boolean = true;
+        let elm = element(by.id(id));
+
+        elm.isPresent().then(() => {
+            console.log("Radom elementa... " + id);
+            isElementNotDisplayed = false;
+        });
+
+        return isElementNotDisplayed;
+    }
 }
