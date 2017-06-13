@@ -4,8 +4,7 @@ export class CommonFunctions {
     /**
      * Checks if elements is displayed
      */
-
-    isElementDisplayedById(id: string, msg?: string): boolean {
+   public static isElementDisplayedById(id: string, msg?: string): boolean {
         var isElementDisplayed: boolean = false;
         let elm = element(by.id(id));
         var resolvedProm = elm.isPresent().then;
@@ -24,7 +23,7 @@ export class CommonFunctions {
     /**
  * Checks if elements is NOT displayed
  */
-    isElementNotDisplayedById(id: string, msg: string): boolean {
+   public static isElementNotDisplayedById(id: string, msg: string): boolean {
         var isElementNotDisplayed: boolean = true;
         let elm = element(by.id(id));
 

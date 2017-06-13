@@ -8,8 +8,8 @@
     "tsc": "tsc",
     "pretest": "npm run tsc",
     "test": "protractor tmp/conf.js",
-    "debug": "node --inspect --debug-brk protractor js/confPageObjects.js",
-    "run": "protractor .\\js\\confPageObjects.js" 
+    "debug": "node --inspect --debug-brk protractor js/conf.js",
+    "run": "protractor .\\js\\conf.js" 
   },
   "dependencies": {
     "@types/jasmine": "2.5.51",
