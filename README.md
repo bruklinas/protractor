@@ -2,7 +2,7 @@
 github update
 another github update
 ## Getting started
-
+#Updated the file for origin/master to be ahead
 This package.json references the local protractor directory with `"protractor": "file: ../"`. For the type declarations to work, from the protractor directory run an `npm install` to generate the declarations file.
 
 Next, install the exampleTypescript node_modules with:
