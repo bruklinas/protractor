@@ -34,4 +34,11 @@ export class CommonFunctions {
 
         return isElementNotDisplayed;
     }
+    /**
+     * sets the string value for the provided WebElement
+     */
+    static setValue(element, value : string): void {
+        element.clear();
+        element.sendKeys(value);
+    }
 }

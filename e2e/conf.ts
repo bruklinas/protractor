@@ -16,6 +16,6 @@ export let config: Config = {
     browserName: 'chrome'
   },
   resultJsonOutputFile:'./result.json',
-  specs: [ 'greetingSpec.js', 'idCheck.js' ],
+  specs: [ 'greetingSpec.js', 'todoSpec.js' ],
   seleniumAddress: 'http://localhost:4444/wd/hub'
 };

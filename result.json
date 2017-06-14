@@ -6,7 +6,7 @@
         "passed": true
       }
     ],
-    "duration": 7759
+    "duration": 1
   },
   {
     "description": "angularjs homepage \"Name\" section should greet the named user with an updated name",
@@ -15,7 +15,7 @@
         "passed": true
       }
     ],
-    "duration": 4094
+    "duration": 0
   },
   {
     "description": "angularjs homepage \"Name\" section should display only Hello if user name is not provided",
@@ -24,15 +24,15 @@
         "passed": true
       }
     ],
-    "duration": 2971
+    "duration": 0
   },
   {
-    "description": "idSpec id add-some-control is displayed",
+    "description": "todo list block should add a todo item",
     "assertions": [
       {
         "passed": true
       }
     ],
-    "duration": 1767
+    "duration": 10139
   }
 ]

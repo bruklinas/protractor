@@ -12,13 +12,9 @@ describe('angularjs homepage', () => {
   let angularHomepage = new AngularPage();
 
   describe('"Name" section', () => {
-/*    beforeEach(() => {
-      
-    });*/
-
     afterEach(() => {
       browser.sleep(1000);
-      console.log("one 'it' block executed.");
+      console.log("'it' block from greetingSpec successfully executed.");
     });
 
     afterAll(() => {
@@ -26,21 +22,19 @@ describe('angularjs homepage', () => {
     });
     
     // --------------------------------   it specs block -------------------------------------------------------------------
-    it('should greet a user by an entered name Julie', () => {
+    xit('should greet a user by an entered name Julie', () => {
       angularHomepage.setName('Julie');
       expect(angularHomepage.getGreetingHeading()).toEqual("Hello Julie!");
     });
 
-    it('should greet the named user with an updated name', () => {
+    xit('should greet the named user with an updated name', () => {
       angularHomepage.setName('Aurimas');
       expect(angularHomepage.getGreetingHeading()).toEqual('Hello Aurimas!');
     });
 
-    it('should display only Hello if user name is not provided', () => {
+    xit('should display only Hello if user name is not provided', () => {
       angularHomepage.clearName();
       expect(angularHomepage.getGreetingHeading()).toEqual('Hello !');
     });
   });
-
-  describe('TODO section', () => { });
 });

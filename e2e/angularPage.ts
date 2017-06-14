@@ -17,7 +17,7 @@ export class AngularPage {
   archiveLink = element(by.css("a[ng-click='todoList.archive()']"));
   todoInput = element(by.model('todoList.todoText'));
   todoInputSubmit = element(by.css('input.btn-primary'));
-  todoList = element.all(by.repeater('todo in todoList.todos'));
+  todoList = element(by.repeater('todo in todoList.todos'));
 
   // ---------------------- Methods --------------------------------------------
   /**
@@ -36,9 +36,9 @@ export class AngularPage {
     this.nameInput.sendKeys(name);
   }
 
- /**
- * clears the Name input field
- */
+  /**
+  * clears the Name input field
+  */
   clearName() {
     this.nameInput.clear();
   }
@@ -51,5 +51,11 @@ export class AngularPage {
   }
 
   // ---------------------- Todo related --------------------------------------------
-
+  /**
+   * gets the text value of todo item with specified @param=row
+   */
+  getTextOfSpecificTodo(row: number): promise.Promise<string> {
+    let myTodo = element(by.repeater('todo in todoList.todos').row(row));
+    return myTodo.element(by.css('span')).getText();
+  }
 }
