@@ -41,19 +41,4 @@ export class CommonFunctions {
         element.clear();
         element.sendKeys(value);
     }
-
-    /***
-     * checks if element is not present in the page
-     */
-    public static isElementNotDisplayed(element): boolean {
-        var EC = ExpectedConditions;
-        browser.wait(EC.invisibilityOf(element), 5000).then(function () {
-            if (EC.invisibilityOf(element)) {
-                return true;
-            } else {
-                return false;
-            }
-        });
-        return false;
-    }
 }

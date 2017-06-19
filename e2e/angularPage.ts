@@ -19,6 +19,7 @@ export class AngularPage {
   todoInput = element(by.model('todoList.todoText'));
   todoInputSubmit = $('input.btn-primary');
   todoCreatedItem = element(by.repeater(CommonVariables.todoRepeater)).element(by.xpath('//span[text()="'+CommonVariables.todoItemToAddName+'"]'));
+  todoDefaultItem = element(by.repeater(CommonVariables.todoRepeater)).element(by.xpath('//span[text()="'+CommonVariables.todoDefaultItem+'"]'));
 
   // ---------------------- Methods --------------------------------------------
   /**
