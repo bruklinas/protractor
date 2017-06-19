@@ -5,11 +5,11 @@ import { CommonVariables } from './CommonVariables';
 import { browser, element, by } from 'protractor';
 
 // The jasmine typings are brought in via DefinitelyTyped ambient typings.
-describe('todo list block', () => {
+describe('TODO list block', () => {
 
   let angularPage = new AngularPage();
 
-  beforeEach(() => {
+  beforeAll(() => {
     browser.driver.manage().window().maximize();
     angularPage.get();
   });
@@ -20,9 +20,22 @@ describe('todo list block', () => {
     console.log("'it' block from todoSpec successfully executed.")
   });
 
+  // --------------------------------------------- it specs -----------------------------------------------------------------------
+
   it('should add a todo item', () => {
     CommonFunctions.setValue(angularPage.todoInput, CommonVariables.todoItemToAddName);
     angularPage.todoInputSubmit.click();
-    expect(angularPage.getTextOfSpecificTodo(2)).toBe(CommonVariables.todoItemToAddName);      
+    expect(angularPage.getTextOfSpecificTodo(2)).toBe(CommonVariables.todoItemToAddName);
+  });
+
+  it('should strikethrough completed todo item', () => {
+    angularPage.checkSpecificTodoAsCompleted(2);
+    expect(angularPage.getSpecificTodoElementSpan(2).getAttribute('class')).toEqual('done-true');
+  });
+
+  it('should archive completed todo items', () => {
+    angularPage.archiveLink.click();
+    expect(angularPage.getTodoItemsCount()).toBe(1);
+    expect(CommonFunctions.isElementNotDisplayed(angularPage.todoCreatedItem)).toBe(true);
   });
 });

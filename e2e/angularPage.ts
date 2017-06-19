@@ -4,7 +4,8 @@
 // import {browser, element, by, By, $, $$, ExpectedConditions}
 //   from 'protractor/globals';
 //
-import { browser, element, by, ExpectedConditions, promise } from 'protractor';
+import { browser, element, by, ExpectedConditions, promise, $ } from 'protractor';
+import { CommonVariables } from './commonVariables';
 
 export class AngularPage {
   //  --------------------------- FIELDS --------------------------------------------
@@ -13,11 +14,11 @@ export class AngularPage {
   greetingHeading = element(by.binding('yourName'));
 
   // ---------------------- Todo section --------------------------------------------
-  todoItemCountString = element(by.css("div[ng-controller='TodoListController as todoList'] span"));
-  archiveLink = element(by.css("a[ng-click='todoList.archive()']"));
+  todoItemCountString = $("div[ng-controller='TodoListController as todoList'] span");
+  archiveLink = $("a[ng-click='todoList.archive()']");
   todoInput = element(by.model('todoList.todoText'));
-  todoInputSubmit = element(by.css('input.btn-primary'));
-  todoList = element(by.repeater('todo in todoList.todos'));
+  todoInputSubmit = $('input.btn-primary');
+  todoCreatedItem = element(by.repeater(CommonVariables.todoRepeater)).element(by.xpath('//span[text()="'+CommonVariables.todoItemToAddName+'"]'));
 
   // ---------------------- Methods --------------------------------------------
   /**
@@ -26,8 +27,9 @@ export class AngularPage {
   get() {
     browser.get('http://www.angularjs.org');
   }
-
-  // ---------------------- Name related --------------------------------------------
+  // --------------------------------------------------------------------------------
+  // ---------------------- NAME related --------------------------------------------
+  // --------------------------------------------------------------------------------
   /**
    * sets the Name input field to a given string
    */
@@ -50,12 +52,31 @@ export class AngularPage {
     return this.greetingHeading.getText();
   }
 
-  // ---------------------- Todo related --------------------------------------------
+  // --------------------------------------------------------------------------------
+  // ---------------------- TODO related --------------------------------------------
+  // --------------------------------------------------------------------------------
   /**
    * gets the text value of todo item with specified @param=row
    */
-  getTextOfSpecificTodo(row: number): promise.Promise<string> {
-    let myTodo = element(by.repeater('todo in todoList.todos').row(row));
-    return myTodo.element(by.css('span')).getText();
+  getTextOfSpecificTodo(row: number) {
+    let myTodo = element(by.repeater(CommonVariables.todoRepeater).row(row));
+    return myTodo.$('span').getText();
+  }
+  /**
+   * marks a specific todo item as completed
+   */
+  checkSpecificTodoAsCompleted(row: number) {
+    let myTodo = element(by.repeater(CommonVariables.todoRepeater).row(row));
+    myTodo.$("input[type='checkbox']").click();
+  }
+
+  getSpecificTodoElementSpan(row: number) {
+    return element(by.repeater(CommonVariables.todoRepeater).row(row)).$('span');
+  }
+  /**
+   * returns the amount of todo items
+   */
+  getTodoItemsCount(){
+    return element.all(by.repeater(CommonVariables.todoRepeater)).count();
   }
 }
