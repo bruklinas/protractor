@@ -18,8 +18,17 @@ export class AngularPage {
   archiveLink = $("a[ng-click='todoList.archive()']");
   todoInput = element(by.model('todoList.todoText'));
   todoInputSubmit = $('input.btn-primary');
-  todoCreatedItem = element(by.repeater(CommonVariables.todoRepeater)).element(by.xpath('//span[text()="'+CommonVariables.todoItemToAddName+'"]'));
-  todoDefaultItem = element(by.repeater(CommonVariables.todoRepeater)).element(by.xpath('//span[text()="'+CommonVariables.todoDefaultItem+'"]'));
+  todoCreatedItem = element(by.repeater(CommonVariables.todoRepeater)).element(by.xpath('//span[text()="' + CommonVariables.todoItemToAddName + '"]'));
+  todoDefaultItem = element(by.repeater(CommonVariables.todoRepeater)).element(by.xpath('//span[text()="' + CommonVariables.todoDefaultItem + '"]'));
+
+  // ---------------------- Search section --------------------------------------------
+  searchInput = element(by.model('projectList.search'));
+  searchResults = element.all(by.repeater("project in projectList.projects | filter:projectList.search | orderBy:'name'"));
+  firstSearchItem = element(by.repeater("project in projectList.projects | filter:projectList.search | orderBy:'name'").row(0));
+  projectNameAnchorList = element.all(by.binding('project.name'));
+  editSproutcoreProjectLink = element(by.xpath("//a[contains(@href,'/edit/4')]"));
+  projectNameInput = element(by.model('editProject.project.name'));
+  saveButton = element(by.buttonText('Save'));
 
   // ---------------------- Methods --------------------------------------------
   /**
@@ -77,7 +86,14 @@ export class AngularPage {
   /**
    * returns the amount of todo items
    */
-  getTodoItemsCount(){
+  getTodoItemsCount() {
     return element.all(by.repeater(CommonVariables.todoRepeater)).count();
+  }
+
+  // --------------------------------------------------------------------------------
+  // ---------------------- Search related --------------------------------------------
+  // --------------------------------------------------------------------------------
+  amountOfFoundSearchResults(): promise.Promise<number> {
+    return this.projectNameAnchorList.count();      
   }
 }

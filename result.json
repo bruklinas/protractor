@@ -24,7 +24,7 @@
         "passed": true
       }
     ],
-    "duration": 1
+    "duration": 0
   },
   {
     "description": "TODO list block should add a todo item",
@@ -33,7 +33,7 @@
         "passed": true
       }
     ],
-    "duration": 5205
+    "duration": 1
   },
   {
     "description": "TODO list block should strikethrough completed todo item",
@@ -42,17 +42,51 @@
         "passed": true
       }
     ],
-    "duration": 2795
+    "duration": 0
   },
   {
     "description": "TODO list block should archive completed todo items",
     "assertions": [
       {
-        "passed": false,
-        "errorMsg": "Expected false to be true.",
-        "stackTrace": "Error: Failed expectation\n    at Object.<anonymous> (C:\\Users\\aurimasp\\Desktop\\Automation tests\\Protractor demos\\GIT\\protractor\\e2e\\todoSpec.ts:39:53)\n    at C:\\Users\\aurimasp\\Desktop\\Automation tests\\Protractor demos\\GIT\\protractor\\node_modules\\jasminewd2\\index.js:112:25\n    at new ManagedPromise (C:\\Users\\aurimasp\\Desktop\\Automation tests\\Protractor demos\\GIT\\protractor\\node_modules\\selenium-webdriver\\lib\\promise.js:1067:7)\n    at ControlFlow.promise (C:\\Users\\aurimasp\\Desktop\\Automation tests\\Protractor demos\\GIT\\protractor\\node_modules\\selenium-webdriver\\lib\\promise.js:2396:12)\n    at schedulerExecute (C:\\Users\\aurimasp\\Desktop\\Automation tests\\Protractor demos\\GIT\\protractor\\node_modules\\jasminewd2\\index.js:95:18)\n    at TaskQueue.execute_ (C:\\Users\\aurimasp\\Desktop\\Automation tests\\Protractor demos\\GIT\\protractor\\node_modules\\selenium-webdriver\\lib\\promise.js:2970:14)\n    at TaskQueue.executeNext_ (C:\\Users\\aurimasp\\Desktop\\Automation tests\\Protractor demos\\GIT\\protractor\\node_modules\\selenium-webdriver\\lib\\promise.js:2953:27)\n    at asyncRun (C:\\Users\\aurimasp\\Desktop\\Automation tests\\Protractor demos\\GIT\\protractor\\node_modules\\selenium-webdriver\\lib\\promise.js:2860:25)\n    at C:\\Users\\aurimasp\\Desktop\\Automation tests\\Protractor demos\\GIT\\protractor\\node_modules\\selenium-webdriver\\lib\\promise.js:676:7"
+        "passed": true
       }
     ],
-    "duration": 2863
+    "duration": 0
+  },
+  {
+    "description": "Search block should change the Search input value",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 3237
+  },
+  {
+    "description": "Search block should find and leave only the item that is available",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 264
+  },
+  {
+    "description": "Search block should find no items with wrong search query",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 216
+  },
+  {
+    "description": "Search block project editing functionality should edit the found project by updating its name",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 911
   }
 ]

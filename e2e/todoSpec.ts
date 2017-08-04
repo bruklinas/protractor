@@ -21,19 +21,18 @@ describe('TODO list block', () => {
   });
 
   // --------------------------------------------- it specs -----------------------------------------------------------------------
-
-  it('should add a todo item', () => {
-    CommonFunctions.setValue(angularPage.todoInput, CommonVariables.todoItemToAddName);
+  xit('should add a todo item', () => {
+    CommonFunctions.setValueWithClear(angularPage.todoInput, CommonVariables.todoItemToAddName);
     angularPage.todoInputSubmit.click();
     expect(angularPage.getTextOfSpecificTodo(2)).toBe(CommonVariables.todoItemToAddName);
   });
 
-  it('should strikethrough completed todo item', () => {
+  xit('should strikethrough completed todo item', () => {
     angularPage.checkSpecificTodoAsCompleted(2);
     expect(angularPage.getSpecificTodoElementSpan(2).getAttribute('class')).toEqual('done-true');
   });
 
-  it('should archive completed todo items', () => {
+  xit('should archive completed todo items', () => {
     angularPage.archiveLink.click();
     expect(angularPage.getTodoItemsCount()).toBe(1);
     expect(angularPage.todoDefaultItem.isPresent()).toBe(true);

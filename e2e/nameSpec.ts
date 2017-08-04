@@ -12,14 +12,6 @@ describe('angularjs homepage', () => {
   let angularHomepage = new AngularPage();
 
   describe('"Name" section', () => {
-    afterEach(() => {
-      browser.sleep(1000);
-      console.log("'it' block from greetingSpec successfully executed.");
-    });
-
-    afterAll(() => {
-      console.log("Finished with Greeting tests!");
-    });
     
     // --------------------------------   it specs block -------------------------------------------------------------------
     xit('should greet a user by an entered name Julie', () => {

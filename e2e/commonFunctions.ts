@@ -37,7 +37,7 @@ export class CommonFunctions {
     /**
      * sets the string value for the provided WebElement
      */
-    static setValue(element, value: string): void {
+    static setValueWithClear(element, value: string): void {
         element.clear();
         element.sendKeys(value);
     }
