@@ -14,17 +14,17 @@ describe('angularjs homepage', () => {
   describe('"Name" section', () => {
     
     // --------------------------------   it specs block -------------------------------------------------------------------
-    xit('should greet a user by an entered name Julie', () => {
+    it('should greet a user by an entered name Julie', () => {
       angularHomepage.setName('Julie');
       expect(angularHomepage.getGreetingHeading()).toEqual("Hello Julie!");
     });
 
-    xit('should greet the named user with an updated name', () => {
+    it('should greet the named user with an updated name', () => {
       angularHomepage.setName('Aurimas');
       expect(angularHomepage.getGreetingHeading()).toEqual('Hello Aurimas!');
     });
 
-    xit('should display only Hello if user name is not provided', () => {
+    it('should display only Hello if user name is not provided', () => {
       angularHomepage.clearName();
       expect(angularHomepage.getGreetingHeading()).toEqual('Hello !');
     });

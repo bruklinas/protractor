@@ -42,17 +42,5 @@ describe('Search block', () => {
         angularPage.saveButton.click();
       });
     });
-/*    it('should find the project by the updated name', () => {
-      CommonFunctions.setValueWithClear(angularPage.searchInput, CommonVariables.updatedProjectName);
-      expect(angularPage.searchResults.count()).toBe(1);
-      expect(angularPage.firstSearchItem.getText()).toMatch('SproutCore2');
-    });*/
   });
-});
-
-function celebrityIDCreator (theCelebrities) {
-    var i;
-    var uniqueID = 100;
-    for (i = 0; i < theCelebrities.length; i++) {
-        theCelebrities[i]["id"] = function (j)  { return function () { return uniqueID + j;} () } (i); 
-    }
+})
