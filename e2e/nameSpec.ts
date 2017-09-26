@@ -4,9 +4,15 @@ import { browser } from 'protractor';
 
 // The jasmine typings are brought in via DefinitelyTyped ambient typings.
 describe('angularjs homepage', () => {
+  let id = 1;
   beforeEach(() => {
     browser.driver.manage().window().maximize();
     angularHomepage.get();
+  });
+
+  afterEach(() => {
+    console.log(id + " 'it' block from nameSpec successfully executed.")
+    id++;
   });
 
   let angularHomepage = new AngularPage();

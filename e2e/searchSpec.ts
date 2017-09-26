@@ -8,13 +8,20 @@ import { browser, element, by } from 'protractor';
 describe('Search block', () => {
 
   let angularPage = new AngularPage();
-
+  let id = 1;
   beforeAll(() => {
     browser.driver.manage().window().maximize();
     angularPage.get();
   });
 
+  afterEach(() => {
+    console.log(id + " 'it' block from searchSpec successfully executed.");
+    id++;
+  });
+
   // --------------------------------------------- it specs -----------------------------------------------------------------------
+  //
+
   it('should change the Search input value', () => {
     CommonFunctions.setValueWithClear(angularPage.searchInput, CommonVariables.searchParameter);
     expect(angularPage.searchInput.getAttribute("value")).toBe(CommonVariables.searchParameter);

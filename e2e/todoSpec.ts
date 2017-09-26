@@ -8,7 +8,8 @@ import { browser, element, by, ExpectedConditions } from 'protractor';
 describe('TODO list block', () => {
 
   let angularPage = new AngularPage();
-
+  let id = 1;
+  
   beforeAll(() => {
     browser.driver.manage().window().maximize();
     angularPage.get();
@@ -16,7 +17,8 @@ describe('TODO list block', () => {
 
 
   afterEach(() => {
-    console.log("'it' block from todoSpec successfully executed.")
+    console.log(id + " 'it' block from todoSpec successfully executed.");
+    id++;
   });
 
   // --------------------------------------------- it specs -----------------------------------------------------------------------

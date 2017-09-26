@@ -6,7 +6,7 @@
         "passed": true
       }
     ],
-    "duration": 5730
+    "duration": 5620
   },
   {
     "description": "angularjs homepage \"Name\" section should greet the named user with an updated name",
@@ -15,7 +15,7 @@
         "passed": true
       }
     ],
-    "duration": 2305
+    "duration": 2278
   },
   {
     "description": "angularjs homepage \"Name\" section should display only Hello if user name is not provided",
@@ -24,7 +24,7 @@
         "passed": true
       }
     ],
-    "duration": 1677
+    "duration": 1644
   },
   {
     "description": "TODO list block should add a todo item",
@@ -33,7 +33,7 @@
         "passed": true
       }
     ],
-    "duration": 3900
+    "duration": 1312
   },
   {
     "description": "TODO list block should strikethrough completed todo item",
@@ -42,7 +42,7 @@
         "passed": true
       }
     ],
-    "duration": 2755
+    "duration": 191
   },
   {
     "description": "TODO list block should archive completed todo items",
@@ -51,7 +51,7 @@
         "passed": true
       }
     ],
-    "duration": 2922
+    "duration": 298
   },
   {
     "description": "Search block should change the Search input value",
@@ -60,7 +60,7 @@
         "passed": true
       }
     ],
-    "duration": 1252
+    "duration": 1210
   },
   {
     "description": "Search block should find and leave only the item that is available",
@@ -69,7 +69,7 @@
         "passed": true
       }
     ],
-    "duration": 333
+    "duration": 246
   },
   {
     "description": "Search block should find no items with wrong search query",
@@ -78,7 +78,7 @@
         "passed": true
       }
     ],
-    "duration": 260
+    "duration": 227
   },
   {
     "description": "Search block project editing functionality should edit the found project by updating its name",
@@ -87,6 +87,6 @@
         "passed": true
       }
     ],
-    "duration": 881
+    "duration": 733
   }
 ]

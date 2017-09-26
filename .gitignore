@@ -4,3 +4,4 @@ tmp/
 !asyncAwait/*.js
 npm-debug.log
 
+result.json
